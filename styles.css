@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #444;
+  margin: 0;
+  text-align: center;
+}
+
+#face,
+#fsize {
+  display: none;
+}
+
+
+#fire-button {
+  position: absolute;
+  bottom: 20%;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: navy;
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+}
