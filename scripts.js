@@ -5,7 +5,7 @@ text.value = getEmoji();
 fsize.value = "40";
 
 function getEmoji() {
-  return (Math.floor(Math.random() * 100) > 80) ? "💩" : "🦄";
+  return (Math.floor(Math.random() * 100) > 80) ? "🎸" : "🛹";
 }
 
 function emoji(face, startx, starty, flour, fs, flyUpMax) {
