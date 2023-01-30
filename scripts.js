@@ -1,10 +1,13 @@
-var flyingMen = [];
-
+var flyingElements = [];
 var text = document.getElementById("face");
 var button = document.getElementById('fire-button');
 text.value = getEmoji();
 fsize.value = "40";
-//emoji object
+
+function getEmoji() {
+  return (Math.floor(Math.random() * 100) > 80) ? "💩" : "🦄";
+}
+
 function emoji(face, startx, starty, flour, fs, flyUpMax) {
   this.isAlive = true;
   this.face = face;
@@ -47,13 +50,7 @@ function emoji(face, startx, starty, flour, fs, flyUpMax) {
 
 }
 
-function getEmoji() {
-  return (Math.floor(Math.random() * 100) > 80) ? "💩" : "🦄";
-}
-
-
 button.addEventListener("click", goB);
-
 
 function goB() {
   var fontsize = fsize.value;
@@ -63,18 +60,18 @@ function goB() {
   var face = getEmoji();
   for (var i = 0; i < 50; i++) {
     var coolGuy = new emoji(face, xv, yv, fl, fontsize, 12);
-    flyingMen.push(coolGuy);
+    flyingElements.push(coolGuy);
   }
 
 }
 
 function render() {
-  for (var i = 0; i < flyingMen.length; i++) {
-    if (flyingMen[i].isAlive == true) {
-      flyingMen[i].refresh();
+  for (var i = 0; i < flyingElements.length; i++) {
+    if (flyingElements[i].isAlive == true) {
+      flyingElements[i].refresh();
     } else {
-      flyingMen[i].element.remove();
-      flyingMen.splice(i, 1);
+      flyingElements[i].element.remove();
+      flyingElements.splice(i, 1);
     }
   }
   requestAnimationFrame(render);
