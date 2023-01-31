@@ -5,7 +5,28 @@ text.value = getEmoji();
 fsize.value = "40";
 
 function getEmoji() {
-  return (Math.floor(Math.random() * 100) > 80) ? "🎸" : "🛹";
+  var number = Math.floor(Math.random() * 100);
+  console.log(number);
+
+  if (number > 90) {
+    return "🍔";
+  } else if (number > 80) {
+    return "🍗";
+  } else if (number > 70) {
+    return "🍝";
+  } else if (number > 60) {
+    return "🧇";
+  } else if (number > 50) {
+    return "🍕";
+  } else if (number > 40) {
+    return "🍭";
+  } else if (number > 30) {
+    return "🍩";
+  } else if (number > 20) {
+    return "🍬";
+  } else {
+    return "🍫";
+  }
 }
 
 function emoji(face, startx, starty, flour, fs, flyUpMax) {

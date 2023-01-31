@@ -2,9 +2,8 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: #444;
+  background: #333;
   margin: 0;
-  text-align: center;
 }
 
 #face,
@@ -20,8 +19,9 @@ body {
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
-  background: navy;
-  color: white;
+  background: yellow;
+  color: red;
   font-size: 2em;
   font-weight: 800;
+  left: calc(50% - 76px);
 }
